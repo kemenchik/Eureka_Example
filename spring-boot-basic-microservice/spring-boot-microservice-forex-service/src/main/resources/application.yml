@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: forex-service
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+  client:
+    enabled: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8000
